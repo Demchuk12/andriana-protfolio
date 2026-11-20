@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2F55"/><stop offset="1" stop-color="#5A4A7A"/></linearGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .12 0"/></filter></defs>
+<rect width="800" height="800" fill="url(#s)"/>
+<circle cx="440" cy="230" r="90" fill="#fff" opacity=".35"/>
+<path d="M0 650 Q200 560 400 640 T800 620 L800 800 L0 800 Z" fill="#C98A5B" opacity=".55"/>
+<path d="M0 520 L60 520 L60 470 L90 440 L120 470 L120 520 L200 520 L240 400 L280 520 L360 520 L360 480 L400 380 L440 480 L440 520 L520 520 L560 410 L600 520 L800 520 L800 800 L0 800 Z" fill="#C98A5B"/>
+<path d="M0 700 Q220 640 420 700 T800 690 L800 800 L0 800 Z" fill="#1A1C33"/>
+<g fill="#1A1C33" opacity=".9"><circle cx="300" cy="662" r="14"/><rect x="288" y="676" width="24" height="60" rx="10"/><circle cx="355" cy="656" r="14"/><rect x="343" y="670" width="24" height="60" rx="10"/><circle cx="410" cy="662" r="14"/><rect x="398" y="676" width="24" height="60" rx="10"/><circle cx="465" cy="656" r="14"/><rect x="453" y="670" width="24" height="60" rx="10"/></g>
+<rect width="800" height="800" filter="url(#n)"/>
+</svg>

@@ -1,0 +1,72 @@
+/* ── Світла тема «День у дорозі» ── */
+:root,
+:root[data-theme='light'] {
+	--bg: #f6efe4;
+	--bg-alt: #efe4d2;
+	--surface: #fffaf2;
+	--surface-2: #f9f1e3;
+	--ink: #1d2b36;
+	--ink-soft: #4d5c66;
+	--ink-faint: #7d8a92;
+	--line: #dccbb0;
+	--primary: #1f4e6b; /* морський синій */
+	--primary-ink: #fffaf2;
+	--accent: #c8553d; /* теракота */
+	--accent-soft: #f1d3c7;
+	--olive: #6e7b3f;
+	--gold: #b8862d;
+	--map-land: #e6d8bf;
+	--map-land-active: #d9b99a;
+	--map-stroke: #f6efe4;
+	--map-sea: #dbe7ea;
+	--shadow: 0 1px 2px rgb(60 40 20 / 0.06), 0 8px 24px rgb(60 40 20 / 0.08);
+	--shadow-lg: 0 2px 4px rgb(60 40 20 / 0.06), 0 20px 48px rgb(60 40 20 / 0.14);
+	--paper-noise: 0.05;
+	color-scheme: light;
+}
+
+/* ── Темна тема «Нічний рейс» ── */
+:root[data-theme='dark'] {
+	--bg: #0f1b2a;
+	--bg-alt: #13233a;
+	--surface: #182a40;
+	--surface-2: #1d324c;
+	--ink: #f1e9dc;
+	--ink-soft: #bfc6cc;
+	--ink-faint: #8b97a3;
+	--line: #2c4460;
+	--primary: #e0b15c; /* теплий золотий */
+	--primary-ink: #0f1b2a;
+	--accent: #e07a5f;
+	--accent-soft: #3b2a2e;
+	--olive: #a7b46b;
+	--gold: #e0b15c;
+	--map-land: #20364f;
+	--map-land-active: #34506f;
+	--map-stroke: #0f1b2a;
+	--map-sea: #0c1724;
+	--shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
+	--shadow-lg: 0 2px 4px rgb(0 0 0 / 0.3), 0 20px 48px rgb(0 0 0 / 0.45);
+	--paper-noise: 0.08;
+	color-scheme: dark;
+}
+
+:root {
+	--font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+	--font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-hand: 'Caveat', 'Comic Sans MS', cursive;
+
+	--radius: 14px;
+	--radius-sm: 8px;
+	--gutter: 16px;
+	--max: 1180px;
+	--header-h: 64px;
+	--ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--gutter: 32px;
+		--header-h: 72px;
+	}
+}
