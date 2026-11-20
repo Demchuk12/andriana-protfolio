@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [
 		sveltekit({
-			adapter: adapter({ pages: 'build', assets: 'build', strict: true }),
+			adapter: adapter(),
 			prerender: { handleHttpError: 'fail' }
 		})
 	]
