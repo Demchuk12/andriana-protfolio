@@ -1,4 +1,5 @@
 {
+  "order": 5,
   "city": {
     "uk": "Трансильванія",
     "en": "Transylvania"
@@ -9,7 +10,7 @@
     "uk": "Середньовічні містечка, замки й Карпати.",
     "en": "Medieval towns, castles and the Carpathians."
   },
-  "cover": "/photos/placeholder-5.svg",
+  "cover": "/photos/1000010940.webp",
   "photos": [
     {
       "images": [
@@ -21,5 +22,7 @@
       }
     }
   ],
-  "order": 5
+  "trips": null,
+  "years": "",
+  "label": ""
 }
