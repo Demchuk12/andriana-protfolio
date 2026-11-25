@@ -1,0 +1,30 @@
+{
+  "role": {
+    "uk": "Керівниця туристичних груп",
+    "en": "Tour Group Leader"
+  },
+  "tagline": {
+    "uk": "Супроводжую групи автобусними турами Європою: від першого дзвінка до останньої зупинки.",
+    "en": "I lead groups on coach tours across Europe, from the first call to the last stop."
+  },
+  "aboutTitle": {
+    "uk": "Подорожі, де все продумано",
+    "en": "Journeys where everything is taken care of"
+  },
+  "destinationsIntro": {
+    "uk": "Країни й міста, куди я їздила з групами. Натисніть на точку на карті, щоб побачити поїздку.",
+    "en": "Countries and cities I have travelled to with groups. Tap a point on the map to see the trip."
+  },
+  "galleryIntro": {
+    "uk": "Моменти з турів разом із туристами.",
+    "en": "Moments from the tours, together with the travellers."
+  },
+  "contactTitle": {
+    "uk": "Потрібен супроводжуючий — звертайтесь",
+    "en": "Need a tour escort? Get in touch"
+  },
+  "contactText": {
+    "uk": "Супроводжу вашу групу в автобусному турі Європою: комунікація з туристами, координація перевізників, готелів та екскурсоводів, контроль програми від виїзду до повернення.",
+    "en": "I will accompany your group on a European coach tour: communication with travellers, coordination of carriers, hotels and local guides, and keeping the programme on track from departure to return."
+  }
+}

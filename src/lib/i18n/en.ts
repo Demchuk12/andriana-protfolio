@@ -1,3 +1,4 @@
+import { texts } from './texts.ts';
 import type { Dict } from './index.ts';
 
 export const en: Dict = {
@@ -21,7 +22,7 @@ export const en: Dict = {
 	hero: {
 		ticket: 'Boarding pass',
 		passenger: 'Passenger',
-		role: 'Tour Group Leader',
+		role: texts.role.en,
 		from: 'From',
 		to: 'To',
 		fromCity: 'Lviv',
@@ -30,13 +31,13 @@ export const en: Dict = {
 		seatValue: '1A · guide',
 		gate: 'Countries',
 		since: 'On the road since',
-		tagline: 'I lead groups on coach tours across Europe, from the first call to the last stop.',
+		tagline: texts.tagline.en,
 		ctaRoutes: 'My routes',
 		ctaContact: 'Get in touch'
 	},
 	about: {
 		kicker: 'About me',
-		title: 'Journeys where everything is taken care of',
+		title: texts.aboutTitle.en,
 		stats: {
 			countries: { one: 'country', few: 'countries', many: 'countries', other: 'countries' },
 			places: { one: 'destination', few: 'destinations', many: 'destinations', other: 'destinations' },
@@ -47,16 +48,15 @@ export const en: Dict = {
 	destinations: {
 		kicker: 'Travel map',
 		title: 'Destinations',
-		intro: 'Countries and cities I have travelled to with groups. Tap a point on the map to see the trip.',
+		intro: texts.destinationsIntro.en,
 		all: 'All',
 		trips: { one: 'trip', few: 'trips', many: 'trips', other: 'trips' },
-		demo: 'Sample',
 		home: 'Lviv: start'
 	},
 	gallery: {
 		kicker: 'Postcards from the road',
 		title: 'Gallery',
-		intro: 'Moments from the tours, together with the travellers.',
+		intro: texts.galleryIntro.en,
 		all: 'All',
 		open: 'Open photo',
 		prev: 'Previous photo',
@@ -77,8 +77,8 @@ export const en: Dict = {
 	},
 	contact: {
 		kicker: 'Mailbox',
-		title: 'Need a tour escort? Get in touch',
-		text: 'I will accompany your group on a European coach tour: communication with travellers, coordination of carriers, hotels and local guides, and keeping the programme on track from departure to return.',
+		title: texts.contactTitle.en,
+		text: texts.contactText.en,
 		greeting: 'Greetings from the road!',
 		phone: 'Phone',
 		email: 'Email',

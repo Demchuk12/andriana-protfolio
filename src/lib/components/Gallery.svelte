@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { gallery } from '#lib/data/gallery.ts';
+	import type { Photo } from '#lib/data/gallery.ts';
 	import { destinations } from '#lib/data/destinations.ts';
 	import { useI18n } from '#lib/i18n/context.ts';
 	import { reveal } from '#lib/reveal.ts';
 	import Lightbox from './Lightbox.svelte';
 
+	let { gallery }: { gallery: Photo[] } = $props();
 	const i18n = useI18n();
 	const t = $derived(i18n.t);
 
 	let filter = $state<string | null>(null);
 	let openIndex = $state<number | null>(null);
 
-	const filters = destinations.filter((d) => gallery.some((p) => p.destinationId === d.id));
+	const filters = $derived(destinations.filter((d) => gallery.some((p) => p.destinationId === d.id)));
 	const photos = $derived(filter ? gallery.filter((p) => p.destinationId === filter) : gallery);
 </script>
 
@@ -33,7 +34,7 @@
 		</div>
 
 		<ul class="grid">
-			{#each photos as p, i (p.src + p.caption.en)}
+			{#each photos as p, i (p.destinationId + p.src + i)}
 				<li style="--r:{[-1.5, 1, -0.5, 1.5][i % 4]}deg">
 					<button class="photo" onclick={() => (openIndex = i)} aria-label="{t.gallery.open}: {p.caption[i18n.lang]}">
 						<img src={p.src} alt={p.alt[i18n.lang]} loading="lazy" style="aspect-ratio:{p.ratio}" />

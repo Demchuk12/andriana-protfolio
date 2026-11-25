@@ -1,0 +1,413 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.273.0/schema/sveltia-cms.json
+# Налаштування адмінки (/admin). Документація: https://sveltiacms.app/en/docs
+# Кожне збереження = коміт у main, після якого Vercel перезбирає сайт.
+
+backend:
+  name: github
+  repo: Demchuk12/andriana-protfolio
+  branch: main
+  auth_methods: [token]
+
+app_title: Портфоліо Андріани
+site_url: https://datsko-portfolio.vercel.app
+logo:
+  src: /favicon.svg
+
+media_folder: /static/photos
+public_folder: /photos
+
+# Фото стискаються прямо в браузері перед завантаженням (зокрема HEIC з iPhone)
+media_libraries:
+  stock_assets:
+    providers: []
+  default:
+    config:
+      slugify_filename: true
+  all:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 82
+        width: 1600
+        height: 1600
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+editor:
+  preview: false
+
+collections:
+  - name: destinations
+    label: Напрямки та фото
+    label_singular: напрямок
+    description: Кожен напрямок з’являється на карті, у картках і в галереї.
+    icon: flight_takeoff
+    folder: src/content/destinations
+    format: json
+    create: true
+    slug: '{{city.en}}'
+    identifier_field: city.uk
+    summary: '{{city.uk}}'
+    thumbnail: cover
+    reorder: true
+    fields:
+      - name: city
+        label: Місто
+        widget: object
+        fields:
+          - { name: uk, label: Українською, widget: string }
+          - { name: en, label: Англійською, widget: string }
+      - name: country
+        label: Країна
+        widget: select
+        options:
+          - { value: AT, label: "Австрія" }
+          - { value: AL, label: "Албанія" }
+          - { value: DZ, label: "Алжир" }
+          - { value: AD, label: "Андорра" }
+          - { value: BE, label: "Бельгія" }
+          - { value: BY, label: "Білорусь" }
+          - { value: BG, label: "Болгарія" }
+          - { value: BA, label: "Боснія і Герцеговина" }
+          - { value: VA, label: "Ватикан" }
+          - { value: GB, label: "Велика Британія" }
+          - { value: GR, label: "Греція" }
+          - { value: GE, label: "Грузія" }
+          - { value: DK, label: "Данія" }
+          - { value: EE, label: "Естонія" }
+          - { value: IE, label: "Ірландія" }
+          - { value: IS, label: "Ісландія" }
+          - { value: ES, label: "Іспанія" }
+          - { value: IT, label: "Італія" }
+          - { value: CY, label: "Кіпр" }
+          - { value: XK, label: "Косово" }
+          - { value: LV, label: "Латвія" }
+          - { value: LT, label: "Литва" }
+          - { value: LI, label: "Ліхтенштейн" }
+          - { value: LU, label: "Люксембург" }
+          - { value: MT, label: "Мальта" }
+          - { value: MA, label: "Марокко" }
+          - { value: MD, label: "Молдова" }
+          - { value: MC, label: "Монако" }
+          - { value: NL, label: "Нідерланди" }
+          - { value: DE, label: "Німеччина" }
+          - { value: "NO", label: "Норвегія" }
+          - { value: MK, label: "Північна Македонія" }
+          - { value: PL, label: "Польща" }
+          - { value: PT, label: "Португалія" }
+          - { value: RO, label: "Румунія" }
+          - { value: SM, label: "Сан-Марино" }
+          - { value: RS, label: "Сербія" }
+          - { value: SK, label: "Словаччина" }
+          - { value: SI, label: "Словенія" }
+          - { value: TN, label: "Туніс" }
+          - { value: TR, label: "Туреччина" }
+          - { value: HU, label: "Угорщина" }
+          - { value: UA, label: "Україна" }
+          - { value: FI, label: "Фінляндія" }
+          - { value: FR, label: "Франція" }
+          - { value: HR, label: "Хорватія" }
+          - { value: CZ, label: "Чехія" }
+          - { value: ME, label: "Чорногорія" }
+          - { value: CH, label: "Швейцарія" }
+          - { value: SE, label: "Швеція" }
+      - name: location
+        label: Точка на карті
+        widget: map
+        hint: Знайдіть місто й поставте точку на карті.
+        type: Point
+        decimals: 4
+        center: [16, 47]
+        zoom: 4
+      - name: description
+        label: Короткий опис
+        widget: object
+        fields:
+          - { name: uk, label: Українською, widget: text }
+          - { name: en, label: Англійською, widget: text, required: false }
+      - name: cover
+        label: Обкладинка
+        widget: image
+        required: false
+        choose_url: false
+        hint: Якщо не вибрати, візьметься перше фото нижче.
+      - name: photos
+        label: Фото для галереї
+        label_singular: фото
+        widget: list
+        required: false
+        collapsed: true
+        summary: '{{caption.uk}}'
+        hint: Можна додати кілька фото з одним підписом або кожне окремо зі своїм.
+        fields:
+          - name: images
+            label: Фото
+            widget: image
+            multiple: true
+            choose_url: false
+          - name: caption
+            label: Підпис
+            widget: object
+            hint: Без підпису покажеться назва міста.
+            required: false
+            fields:
+              - { name: uk, label: Українською, widget: string, required: false }
+              - { name: en, label: Англійською, widget: string, required: false }
+      - name: trips
+        label: Скільки разів їздила
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+      - name: years
+        label: Роки поїздок
+        widget: string
+        required: false
+        hint: Наприклад, 2025–2026
+      - name: label
+        label: Підпис на карті
+        widget: select
+        required: false
+        hint: Змініть, якщо назва накладається на сусіднє місто.
+        options:
+          - { value: left, label: Ліворуч від точки }
+          - { value: right, label: Праворуч від точки }
+
+  - name: site
+    label: Про мене та тексти
+    icon: person
+    files:
+      - name: profile
+        label: Профіль і контакти
+        icon: contact_page
+        file: src/content/profile.json
+        fields:
+          - name: name
+            label: Ім’я та прізвище
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string }
+          - { name: phone, label: Телефон, widget: string }
+          - { name: email, label: Email, widget: string }
+          - { name: telegram, label: 'Telegram (нік без @)', widget: string }
+          - { name: sinceYear, label: 'У дорозі з (рік)', widget: number, value_type: int }
+          - name: summary
+            label: Про мене
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: text }
+              - { name: en, label: Англійською, widget: text, required: false }
+      - name: experience
+        label: Досвід роботи
+        icon: work
+        file: src/content/experience.json
+        fields:
+          - name: jobs
+            label: Місця роботи
+            label_singular: місце роботи
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{title.uk}}'
+            fields:
+              - name: title
+                label: Посада
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - { name: company, label: Компанія, widget: string }
+              - name: start
+                label: Початок
+                widget: object
+                hint: Наприклад, квітень 2026
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - name: end
+                label: Завершення
+                widget: object
+                hint: Залиште порожнім, якщо працюєте зараз.
+                required: false
+                fields:
+                  - { name: uk, label: Українською, widget: string, required: false }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - name: points
+                label: Обов’язки
+                label_singular: обов’язок
+                widget: list
+                required: false
+                collapsed: true
+                summary: '{{uk}}'
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+      - name: skills
+        label: Навички, мови, освіта
+        icon: school
+        file: src/content/skills.json
+        fields:
+          - name: tools
+            label: Інструменти
+            label_singular: навичку
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{uk}}'
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: clients
+            label: Клієнти
+            label_singular: навичку
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{uk}}'
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: partners
+            label: Партнери
+            label_singular: навичку
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{uk}}'
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: organization
+            label: Організація
+            label_singular: навичку
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{uk}}'
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: personal
+            label: Особисті якості
+            label_singular: навичку
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{uk}}'
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: languages
+            label: Мови
+            label_singular: мову
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{name.uk}}'
+            fields:
+              - name: name
+                label: Мова
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - name: level
+                label: Рівень
+                widget: object
+                hint: Наприклад, B2
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - { name: code, label: 'Код (дві літери, напр. EN)', widget: string }
+          - name: education
+            label: Освіта
+            label_singular: освіту
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{title.uk}}'
+            fields:
+              - name: title
+                label: Назва
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - name: place
+                label: Заклад
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - { name: years, label: Роки, widget: string }
+          - name: certificates
+            label: Сертифікати
+            label_singular: сертифікат
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{title.uk}}'
+            fields:
+              - name: title
+                label: Назва
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - name: detail
+                label: Деталі
+                widget: object
+                fields:
+                  - { name: uk, label: Українською, widget: string }
+                  - { name: en, label: Англійською, widget: string, required: false }
+              - { name: year, label: Рік, widget: string }
+      - name: texts
+        label: Тексти на сторінці
+        icon: article
+        file: src/content/texts.json
+        fields:
+          - name: role
+            label: Роль під іменем
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: tagline
+            label: Головний слоган
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: text }
+              - { name: en, label: Англійською, widget: text, required: false }
+          - name: aboutTitle
+            label: Заголовок «Про мене»
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: destinationsIntro
+            label: Вступ до напрямків
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: text }
+              - { name: en, label: Англійською, widget: text, required: false }
+          - name: galleryIntro
+            label: Вступ до галереї
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: text }
+              - { name: en, label: Англійською, widget: text, required: false }
+          - name: contactTitle
+            label: Заголовок контактів
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: string }
+              - { name: en, label: Англійською, widget: string, required: false }
+          - name: contactText
+            label: Текст у контактах
+            widget: object
+            fields:
+              - { name: uk, label: Українською, widget: text }
+              - { name: en, label: Англійською, widget: text, required: false }

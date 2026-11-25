@@ -1,3 +1,5 @@
+import { texts } from './texts.ts';
+
 export const uk = {
 	meta: {
 		title: 'Андріана Дацко: керівниця туристичних груп',
@@ -19,7 +21,7 @@ export const uk = {
 	hero: {
 		ticket: 'Посадковий талон',
 		passenger: 'Пасажир',
-		role: 'Керівниця туристичних груп',
+		role: texts.role.uk,
 		from: 'Звідки',
 		to: 'Куди',
 		fromCity: 'Львів',
@@ -28,13 +30,13 @@ export const uk = {
 		seatValue: '1A · гід',
 		gate: 'Країн',
 		since: 'У дорозі з',
-		tagline: 'Супроводжую групи автобусними турами Європою: від першого дзвінка до останньої зупинки.',
+		tagline: texts.tagline.uk,
 		ctaRoutes: 'Мої маршрути',
 		ctaContact: 'Написати мені'
 	},
 	about: {
 		kicker: 'Про мене',
-		title: 'Подорожі, де все продумано',
+		title: texts.aboutTitle.uk,
 		stats: {
 			countries: { one: 'країна', few: 'країни', many: 'країн', other: 'країни' },
 			places: { one: 'напрямок', few: 'напрямки', many: 'напрямків', other: 'напрямку' },
@@ -45,16 +47,15 @@ export const uk = {
 	destinations: {
 		kicker: 'Карта подорожей',
 		title: 'Напрямки',
-		intro: 'Країни й міста, куди я їздила з групами. Натисніть на точку на карті, щоб побачити поїздку.',
+		intro: texts.destinationsIntro.uk,
 		all: 'Усі',
 		trips: { one: 'поїздка', few: 'поїздки', many: 'поїздок', other: 'поїздки' },
-		demo: 'Приклад',
 		home: 'Львів: старт'
 	},
 	gallery: {
 		kicker: 'Листівки з дороги',
 		title: 'Галерея',
-		intro: 'Моменти з турів разом із туристами.',
+		intro: texts.galleryIntro.uk,
 		all: 'Усі',
 		open: 'Відкрити фото',
 		prev: 'Попереднє фото',
@@ -75,8 +76,8 @@ export const uk = {
 	},
 	contact: {
 		kicker: 'Поштова скринька',
-		title: 'Потрібен супроводжуючий — звертайтесь',
-		text: 'Супроводжу вашу групу в автобусному турі Європою: комунікація з туристами, координація перевізників, готелів та екскурсоводів, контроль програми від виїзду до повернення.',
+		title: texts.contactTitle.uk,
+		text: texts.contactText.uk,
 		greeting: 'Вітаю з дороги!',
 		phone: 'Телефон',
 		email: 'Email',

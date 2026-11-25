@@ -1,0 +1,25 @@
+{
+  "city": {
+    "uk": "Флоренція",
+    "en": "Florence"
+  },
+  "country": "IT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[11.26,43.77]}",
+  "description": {
+    "uk": "Дуомо, Понте-Веккьо та галерея Уффіці.",
+    "en": "The Duomo, Ponte Vecchio and the Uffizi Gallery."
+  },
+  "cover": "/photos/placeholder-3.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-3.svg"
+      ],
+      "caption": {
+        "uk": "Вид на Дуомо",
+        "en": "View of the Duomo"
+      }
+    }
+  ],
+  "order": 3
+}

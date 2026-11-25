@@ -6,7 +6,13 @@ export default defineConfig({
 	plugins: [
 		sveltekit({
 			adapter: adapter(),
-			prerender: { handleHttpError: 'fail' }
+			prerender: {
+				// Видалене в адмінці фото не має зупиняти публікацію всього сайту
+				handleHttpError: ({ path, message }) => {
+					if (!path.startsWith('/photos/')) throw new Error(message);
+					console.warn(message);
+				}
+			}
 		})
 	]
 });

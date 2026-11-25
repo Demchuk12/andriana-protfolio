@@ -1,0 +1,25 @@
+{
+  "city": {
+    "uk": "Прага",
+    "en": "Prague"
+  },
+  "country": "CZ",
+  "location": "{\"type\":\"Point\",\"coordinates\":[14.42,50.08]}",
+  "description": {
+    "uk": "Карлів міст, Градчани та астрономічний годинник.",
+    "en": "Charles Bridge, Hradčany and the astronomical clock."
+  },
+  "cover": "/photos/placeholder-2.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-2.svg"
+      ],
+      "caption": {
+        "uk": "Ранок на Карловому мосту",
+        "en": "Morning on Charles Bridge"
+      }
+    }
+  ],
+  "order": 7
+}

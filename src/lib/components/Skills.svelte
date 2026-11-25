@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '#lib/i18n/context.ts';
-	import { skills, languages, education, certificate } from '#lib/data/profile.ts';
+	import { skills, languages, education, certificates } from '#lib/data/profile.ts';
 	import { reveal } from '#lib/reveal.ts';
 
 	const i18n = useI18n();
@@ -20,7 +20,7 @@
 					<div class="group" use:reveal={i * 60}>
 						<h3>{t.skills[group.key]}</h3>
 						<ul>
-							{#each group.items as item (item.en)}
+							{#each group.items as item, j (j)}
 								<li>{item[i18n.lang]}</li>
 							{/each}
 						</ul>
@@ -31,8 +31,8 @@
 			<aside class="passport" use:reveal={150}>
 				<h3>{t.skills.languages}</h3>
 				<ul class="stamps">
-					{#each languages as l, i (l.code)}
-						<li style="--r:{[-8, 6, -3][i]}deg">
+					{#each languages as l, i (i)}
+						<li style="--r:{[-8, 6, -3][i % 3]}deg">
 							<span class="stamp">
 								<span class="code">{l.code}</span>
 								<span class="level">{l.level[i18n.lang]}</span>
@@ -43,7 +43,7 @@
 				</ul>
 
 				<h3>{t.skills.education}</h3>
-				{#each education as e (e.years)}
+				{#each education as e, i (i)}
 					<div class="edu">
 						<strong>{e.title[i18n.lang]}</strong>
 						<span>{e.place[i18n.lang]}</span>
@@ -51,12 +51,16 @@
 					</div>
 				{/each}
 
-				<h3>{t.skills.certificate}</h3>
-				<div class="edu">
-					<strong>{certificate.title[i18n.lang]}</strong>
-					<span>{certificate.detail[i18n.lang]}</span>
-					<span class="year">{certificate.year}</span>
-				</div>
+				{#if certificates.length}
+					<h3>{t.skills.certificate}</h3>
+					{#each certificates as c, i (i)}
+						<div class="edu">
+							<strong>{c.title[i18n.lang]}</strong>
+							<span>{c.detail[i18n.lang]}</span>
+							<span class="year">{c.year}</span>
+						</div>
+					{/each}
+				{/if}
 			</aside>
 		</div>
 	</div>

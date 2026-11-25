@@ -1,0 +1,34 @@
+{
+  "city": {
+    "uk": "Венеція",
+    "en": "Venice"
+  },
+  "country": "IT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[12.33,45.44]}",
+  "description": {
+    "uk": "Гранд-канал, площа Сан-Марко і гондоли.",
+    "en": "The Grand Canal, St Mark’s Square and gondolas."
+  },
+  "cover": "/photos/placeholder-4.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-4.svg"
+      ],
+      "caption": {
+        "uk": "Вечірня Венеція",
+        "en": "Venice at dusk"
+      }
+    },
+    {
+      "images": [
+        "/photos/placeholder-4.svg"
+      ],
+      "caption": {
+        "uk": "Гондоли на каналі",
+        "en": "Gondolas on the canal"
+      }
+    }
+  ],
+  "order": 4
+}

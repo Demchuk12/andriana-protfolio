@@ -15,7 +15,7 @@
 		</div>
 
 		<ol class="timeline">
-			{#each experience as job, i (job.title.en)}
+			{#each experience as job, i (i)}
 				<li use:reveal={i * 120}>
 					<span class="stop" aria-hidden="true"></span>
 					<div class="card">
@@ -25,7 +25,7 @@
 						<h3>{job.title[i18n.lang]}</h3>
 						<p class="company">{job.company}</p>
 						<ul>
-							{#each job.points as p (p.en)}
+							{#each job.points as p, j (j)}
 								<li>{p[i18n.lang]}</li>
 							{/each}
 						</ul>

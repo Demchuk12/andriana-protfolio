@@ -1,0 +1,25 @@
+{
+  "city": {
+    "uk": "Трансильванія",
+    "en": "Transylvania"
+  },
+  "country": "RO",
+  "location": "{\"type\":\"Point\",\"coordinates\":[24.79,46.22]}",
+  "description": {
+    "uk": "Середньовічні містечка, замки й Карпати.",
+    "en": "Medieval towns, castles and the Carpathians."
+  },
+  "cover": "/photos/placeholder-5.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-5.svg"
+      ],
+      "caption": {
+        "uk": "Дорога Карпатами",
+        "en": "Through the Carpathians"
+      }
+    }
+  ],
+  "order": 5
+}

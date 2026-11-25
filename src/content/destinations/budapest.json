@@ -1,0 +1,25 @@
+{
+  "city": {
+    "uk": "Будапешт",
+    "en": "Budapest"
+  },
+  "country": "HU",
+  "location": "{\"type\":\"Point\",\"coordinates\":[19.04,47.5]}",
+  "description": {
+    "uk": "Парламент на Дунаї, купальні та Рибальський бастіон.",
+    "en": "Parliament on the Danube, thermal baths and Fisherman’s Bastion."
+  },
+  "cover": "/photos/placeholder-4.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-4.svg"
+      ],
+      "caption": {
+        "uk": "Вечірній Дунай",
+        "en": "The Danube at night"
+      }
+    }
+  ],
+  "order": 8
+}

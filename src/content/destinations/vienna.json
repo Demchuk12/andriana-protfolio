@@ -1,0 +1,25 @@
+{
+  "city": {
+    "uk": "Відень",
+    "en": "Vienna"
+  },
+  "country": "AT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[16.37,48.21]}",
+  "description": {
+    "uk": "Шенбрунн, кава зі штруделем і Рінгштрассе.",
+    "en": "Schönbrunn, coffee with strudel and the Ringstrasse."
+  },
+  "cover": "/photos/placeholder-6.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-6.svg"
+      ],
+      "caption": {
+        "uk": "Сади Шенбрунна",
+        "en": "Schönbrunn gardens"
+      }
+    }
+  ],
+  "order": 6
+}

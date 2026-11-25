@@ -1,0 +1,34 @@
+{
+  "city": {
+    "uk": "Рим",
+    "en": "Rome"
+  },
+  "country": "IT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[12.5,41.9]}",
+  "description": {
+    "uk": "Колізей, Ватикан і фонтан Треві.",
+    "en": "The Colosseum, the Vatican and the Trevi Fountain."
+  },
+  "cover": "/photos/placeholder-2.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-2.svg"
+      ],
+      "caption": {
+        "uk": "Ранок біля Колізею",
+        "en": "Morning at the Colosseum"
+      }
+    },
+    {
+      "images": [
+        "/photos/placeholder-2.svg"
+      ],
+      "caption": {
+        "uk": "Фото на пам’ять біля фонтану",
+        "en": "Souvenir photo at the fountain"
+      }
+    }
+  ],
+  "order": 2
+}

@@ -1,0 +1,26 @@
+{
+  "city": {
+    "uk": "Меджугор’є",
+    "en": "Medjugorje"
+  },
+  "country": "BA",
+  "location": "{\"type\":\"Point\",\"coordinates\":[17.68,43.19]}",
+  "description": {
+    "uk": "Паломницьке містечко: церква святого Якова й гора Підбрдо.",
+    "en": "A pilgrimage town: St James’ Church and Apparition Hill."
+  },
+  "cover": "/photos/placeholder-1.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-1.svg"
+      ],
+      "caption": {
+        "uk": "Група біля церкви святого Якова",
+        "en": "The group by St James’ Church"
+      }
+    }
+  ],
+  "label": "right",
+  "order": 10
+}

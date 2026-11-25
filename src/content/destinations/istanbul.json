@@ -1,0 +1,34 @@
+{
+  "city": {
+    "uk": "Стамбул",
+    "en": "Istanbul"
+  },
+  "country": "TR",
+  "location": "{\"type\":\"Point\",\"coordinates\":[28.98,41.01]}",
+  "description": {
+    "uk": "Айя-Софія, Блакитна мечеть і прогулянка Босфором.",
+    "en": "Hagia Sophia, the Blue Mosque and a Bosphorus cruise."
+  },
+  "cover": "/photos/placeholder-1.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-1.svg"
+      ],
+      "caption": {
+        "uk": "Група біля Айя-Софії",
+        "en": "The group by Hagia Sophia"
+      }
+    },
+    {
+      "images": [
+        "/photos/placeholder-1.svg"
+      ],
+      "caption": {
+        "uk": "На березі Босфору",
+        "en": "On the Bosphorus"
+      }
+    }
+  ],
+  "order": 1
+}

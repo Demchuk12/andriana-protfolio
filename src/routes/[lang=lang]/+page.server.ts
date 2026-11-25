@@ -1,5 +1,6 @@
+import { buildGallery } from '#lib/server/gallery.ts';
 import { buildMap } from '#lib/server/map.ts';
 import type { PageServerLoad } from './$types';
 
-// Карта рахується один раз під час збірки, у браузер іде лише готовий SVG
-export const load: PageServerLoad = () => ({ map: buildMap() });
+// Карта й галерея рахуються під час збірки, у браузер ідуть лише готові дані
+export const load: PageServerLoad = () => ({ map: buildMap(), gallery: buildGallery() });

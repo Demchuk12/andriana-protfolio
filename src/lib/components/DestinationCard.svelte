@@ -11,7 +11,6 @@
 <article class="card" class:active id="dest-{d.id}" onpointerenter={onhover} onfocusin={onhover}>
 	<div class="photo">
 		<img src={d.cover} alt="" loading="lazy" width="400" height="300" />
-		{#if d.demo}<span class="demo">{t.destinations.demo}</span>{/if}
 		<span class="postmark" aria-hidden="true">{d.countryCode}</span>
 	</div>
 	<div class="body">
@@ -58,19 +57,6 @@
 		.card:hover img {
 			transform: scale(1.05);
 		}
-	}
-	.demo {
-		position: absolute;
-		left: 10px;
-		top: 10px;
-		padding: 2px 10px;
-		border-radius: 999px;
-		background: rgb(0 0 0 / 0.55);
-		color: #fff;
-		font-size: 0.72rem;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
 	}
 	.postmark {
 		position: absolute;

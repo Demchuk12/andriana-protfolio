@@ -1,0 +1,145 @@
+{
+  "tools": [
+    {
+      "uk": "CRM",
+      "en": "CRM"
+    },
+    {
+      "uk": "Excel / Google Sheets",
+      "en": "Excel / Google Sheets"
+    },
+    {
+      "uk": "IP-телефонія Binotel",
+      "en": "Binotel IP telephony"
+    }
+  ],
+  "clients": [
+    {
+      "uk": "комунікація",
+      "en": "communication"
+    },
+    {
+      "uk": "продаж послуг",
+      "en": "service sales"
+    },
+    {
+      "uk": "робота із запитами та зверненнями",
+      "en": "handling requests"
+    }
+  ],
+  "partners": [
+    {
+      "uk": "перевізники",
+      "en": "carriers"
+    },
+    {
+      "uk": "готелі",
+      "en": "hotels"
+    },
+    {
+      "uk": "екскурсоводи",
+      "en": "local guides"
+    },
+    {
+      "uk": "туроператори",
+      "en": "tour operators"
+    }
+  ],
+  "organization": [
+    {
+      "uk": "планування",
+      "en": "planning"
+    },
+    {
+      "uk": "контроль термінів",
+      "en": "deadline control"
+    },
+    {
+      "uk": "логістика",
+      "en": "logistics"
+    }
+  ],
+  "personal": [
+    {
+      "uk": "стресостійкість",
+      "en": "stress resilience"
+    },
+    {
+      "uk": "вирішення конфліктів",
+      "en": "conflict resolution"
+    },
+    {
+      "uk": "уважність до деталей",
+      "en": "attention to detail"
+    },
+    {
+      "uk": "відповідальність",
+      "en": "responsibility"
+    },
+    {
+      "uk": "командна робота",
+      "en": "teamwork"
+    }
+  ],
+  "languages": [
+    {
+      "name": {
+        "uk": "Українська",
+        "en": "Ukrainian"
+      },
+      "level": {
+        "uk": "рідна",
+        "en": "native"
+      },
+      "code": "UA"
+    },
+    {
+      "name": {
+        "uk": "Польська",
+        "en": "Polish"
+      },
+      "level": {
+        "uk": "C1",
+        "en": "C1"
+      },
+      "code": "PL"
+    },
+    {
+      "name": {
+        "uk": "Англійська",
+        "en": "English"
+      },
+      "level": {
+        "uk": "B1",
+        "en": "B1"
+      },
+      "code": "EN"
+    }
+  ],
+  "education": [
+    {
+      "title": {
+        "uk": "Бакалавр, туризм (подвійний диплом)",
+        "en": "BA in Tourism (double degree)"
+      },
+      "place": {
+        "uk": "Національний університет «Львівська політехніка» · Uniwersytet Pomorski w Słupsku",
+        "en": "Lviv Polytechnic National University · Uniwersytet Pomorski w Słupsku"
+      },
+      "years": "2021 – 2025"
+    }
+  ],
+  "certificates": [
+    {
+      "title": {
+        "uk": "Гід супроводу туристичних груп",
+        "en": "Tour group escort guide"
+      },
+      "detail": {
+        "uk": "Автобусні тури європейського напряму",
+        "en": "European coach tours"
+      },
+      "year": "2026"
+    }
+  ]
+}

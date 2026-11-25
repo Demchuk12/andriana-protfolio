@@ -13,6 +13,6 @@
 <About />
 <Experience />
 <Destinations map={data.map} />
-<Gallery />
+<Gallery gallery={data.gallery} />
 <Skills />
 <Contact />

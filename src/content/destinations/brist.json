@@ -1,0 +1,26 @@
+{
+  "city": {
+    "uk": "Бріст",
+    "en": "Brist"
+  },
+  "country": "HR",
+  "location": "{\"type\":\"Point\",\"coordinates\":[17.29,43.14]}",
+  "description": {
+    "uk": "Тиха Макарська рив’єра, галькові пляжі й Адріатика.",
+    "en": "The quiet Makarska Riviera, pebble beaches and the Adriatic."
+  },
+  "cover": "/photos/placeholder-3.svg",
+  "photos": [
+    {
+      "images": [
+        "/photos/placeholder-3.svg"
+      ],
+      "caption": {
+        "uk": "Відпочинок на Адріатиці",
+        "en": "Resting by the Adriatic"
+      }
+    }
+  ],
+  "label": "left",
+  "order": 9
+}

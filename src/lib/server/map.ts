@@ -3,18 +3,8 @@ import { feature } from 'topojson-client';
 import type { Topology, GeometryCollection } from 'topojson-specification';
 import type { FeatureCollection, Geometry } from 'geojson';
 import world from 'world-atlas/countries-50m.json' with { type: 'json' };
+import { countries as countryList } from '#lib/data/countries.ts';
 import { destinations, home } from '#lib/data/destinations.ts';
-
-/** ISO alpha-2 → ISO numeric (як у world-atlas) для європейських країн */
-const ISO: Record<string, string> = {
-	AL: '008', AD: '020', AT: '040', BY: '112', BE: '056', BA: '070', BG: '100', HR: '191',
-	CY: '196', CZ: '203', DK: '208', EE: '233', FI: '246', FR: '250', DE: '276', GR: '300',
-	HU: '348', IS: '352', IE: '372', IT: '380', LV: '428', LI: '438', LT: '440', LU: '442',
-	MT: '470', MD: '498', MC: '492', ME: '499', NL: '528', MK: '807', NO: '578', PL: '616',
-	PT: '620', RO: '642', SM: '674', RS: '688', SK: '703', SI: '705', ES: '724', SE: '752',
-	CH: '756', TR: '792', UA: '804', GB: '826', VA: '336', GE: '268', MA: '504', DZ: '012',
-	TN: '788', XK: '-99'
-};
 
 export const MAP_W = 1000;
 export const MAP_H = 760;
@@ -64,7 +54,7 @@ export function buildMap(): MapData {
 		]);
 
 	const path = geoPath(projection).digits(1);
-	const visited = new Set(destinations.map((d) => ISO[d.countryCode]).filter(Boolean));
+	const visited = new Set(destinations.map((d) => countryList[d.countryCode]?.numeric).filter(Boolean));
 
 	const countries = all.features
 		.map((f, i) => ({
@@ -72,7 +62,7 @@ export function buildMap(): MapData {
 			id: `${f.id ?? 'x'}-${i}`,
 			d: path(f) ?? '',
 			visited: f.id != null && visited.has(String(f.id)),
-			home: String(f.id) === ISO.UA
+			home: String(f.id) === countryList.UA.numeric
 		}))
 		.filter((c) => c.d.length > 0);
 
@@ -86,7 +76,7 @@ export function buildMap(): MapData {
 		height: MAP_H,
 		countries,
 		home: proj(home.coords),
-		points: destinations.map((d) => ({ id: d.id, ...proj(d.coords) }))
+		points: destinations.flatMap((d) => (d.coords ? [{ id: d.id, ...proj(d.coords) }] : []))
 	};
 	return cache;
 }
