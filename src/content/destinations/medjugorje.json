@@ -1,4 +1,5 @@
 {
+  "order": 10,
   "city": {
     "uk": "Меджугор’є",
     "en": "Medjugorje"
@@ -9,7 +10,7 @@
     "uk": "Паломницьке містечко: церква святого Якова й гора Підбрдо.",
     "en": "A pilgrimage town: St James’ Church and Apparition Hill."
   },
-  "cover": "/photos/placeholder-1.svg",
+  "cover": "/photos/1000009987.webp",
   "photos": [
     {
       "images": [
@@ -21,6 +22,7 @@
       }
     }
   ],
-  "label": "right",
-  "order": 10
+  "trips": null,
+  "years": "",
+  "label": "right"
 }
