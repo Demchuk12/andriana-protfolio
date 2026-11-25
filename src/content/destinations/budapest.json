@@ -1,4 +1,5 @@
 {
+  "order": 8,
   "city": {
     "uk": "Будапешт",
     "en": "Budapest"
@@ -9,7 +10,7 @@
     "uk": "Парламент на Дунаї, купальні та Рибальський бастіон.",
     "en": "Parliament on the Danube, thermal baths and Fisherman’s Bastion."
   },
-  "cover": "/photos/placeholder-4.svg",
+  "cover": "/photos/1000010663.webp",
   "photos": [
     {
       "images": [
@@ -21,5 +22,7 @@
       }
     }
   ],
-  "order": 8
+  "trips": null,
+  "years": "",
+  "label": ""
 }
