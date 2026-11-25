@@ -1,0 +1,18 @@
+{
+  "order": 11,
+  "city": {
+    "uk": "Спліт",
+    "en": "Split"
+  },
+  "country": "HR",
+  "location": "{\"type\":\"Point\",\"coordinates\":[16.44,43.5116]}",
+  "description": {
+    "uk": "Палац Діоклетіана",
+    "en": "Diocletian's Palace"
+  },
+  "cover": "/photos/1000009391.webp",
+  "photos": [],
+  "trips": null,
+  "years": "",
+  "label": ""
+}
