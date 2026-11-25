@@ -1,4 +1,5 @@
 {
+  "order": 3,
   "city": {
     "uk": "Флоренція",
     "en": "Florence"
@@ -9,7 +10,7 @@
     "uk": "Дуомо, Понте-Веккьо та галерея Уффіці.",
     "en": "The Duomo, Ponte Vecchio and the Uffizi Gallery."
   },
-  "cover": "/photos/placeholder-3.svg",
+  "cover": "/photos/1000005798.webp",
   "photos": [
     {
       "images": [
@@ -21,5 +22,7 @@
       }
     }
   ],
-  "order": 3
+  "trips": null,
+  "years": "",
+  "label": ""
 }
