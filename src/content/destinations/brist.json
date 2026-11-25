@@ -1,4 +1,5 @@
 {
+  "order": 9,
   "city": {
     "uk": "Бріст",
     "en": "Brist"
@@ -9,7 +10,7 @@
     "uk": "Тиха Макарська рив’єра, галькові пляжі й Адріатика.",
     "en": "The quiet Makarska Riviera, pebble beaches and the Adriatic."
   },
-  "cover": "/photos/placeholder-3.svg",
+  "cover": "/photos/1000007553.webp",
   "photos": [
     {
       "images": [
@@ -21,6 +22,7 @@
       }
     }
   ],
-  "label": "left",
-  "order": 9
+  "trips": null,
+  "years": "",
+  "label": "left"
 }
