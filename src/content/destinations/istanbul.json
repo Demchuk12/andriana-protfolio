@@ -1,4 +1,5 @@
 {
+  "order": 1,
   "city": {
     "uk": "Стамбул",
     "en": "Istanbul"
@@ -9,26 +10,9 @@
     "uk": "Айя-Софія, Блакитна мечеть і прогулянка Босфором.",
     "en": "Hagia Sophia, the Blue Mosque and a Bosphorus cruise."
   },
-  "cover": "/photos/placeholder-1.svg",
-  "photos": [
-    {
-      "images": [
-        "/photos/placeholder-1.svg"
-      ],
-      "caption": {
-        "uk": "Група біля Айя-Софії",
-        "en": "The group by Hagia Sophia"
-      }
-    },
-    {
-      "images": [
-        "/photos/placeholder-1.svg"
-      ],
-      "caption": {
-        "uk": "На березі Босфору",
-        "en": "On the Bosphorus"
-      }
-    }
-  ],
-  "order": 1
+  "cover": "/photos/1000010479.webp",
+  "photos": [],
+  "trips": null,
+  "years": "",
+  "label": ""
 }
