@@ -1,4 +1,5 @@
 {
+  "order": 4,
   "city": {
     "uk": "Венеція",
     "en": "Venice"
@@ -9,7 +10,7 @@
     "uk": "Гранд-канал, площа Сан-Марко і гондоли.",
     "en": "The Grand Canal, St Mark’s Square and gondolas."
   },
-  "cover": "/photos/placeholder-4.svg",
+  "cover": "/photos/1000005798.webp",
   "photos": [
     {
       "images": [
@@ -30,5 +31,7 @@
       }
     }
   ],
-  "order": 4
+  "trips": null,
+  "years": "",
+  "label": ""
 }
